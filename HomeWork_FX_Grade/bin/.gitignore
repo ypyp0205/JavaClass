@@ -1,0 +1,9 @@
+/Controller/
+/Main/
+/SqlMapConfig.properties
+/SqlMapConfig.xml
+/Vo/
+/addScore.fxml
+/barChart.fxml
+/pieChart.fxml
+/score.fxml

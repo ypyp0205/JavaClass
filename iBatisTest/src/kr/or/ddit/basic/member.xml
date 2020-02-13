@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<!--  namespace속성 : 아래에서 작성한 SQL문을 호출할 떄 같이 사용된다. -->
+<sqlMap namespace="memberTest">
+	<!-- 
+		이 영역에 sql문에 맞는 태그를 사용하여 SQL문을 기술한다.
+		
+		사용할 수 있는 기본적인 태그들
+		<select> ~~~ </select>
+		<insert> ~~~ </insert>
+		<update> ~~~ </update>
+		<delete> ~~~ </delete>
+		
+		
+	위 태그에서 사용되는 속성들
+		1) id 속성 : 해당 태그를 호출할 떄 <sqlMap>태그의 namespace와 연결되어 사용하는 이름
+		2) parameterClass속성 : sql문에 사용될 데이터가 들어있는 객체를 지정한다.
+			(보통 VO클래스, 자바의 자료형 이름등이 사용된다., typeAlsas로 지정한 alias명을 사용할 수 있다.
+		3)	resultClass속성 :select문을 실행한 결과를 담을 객체를 지정한다.
+			(보통 VO클래스나 자바의 자료형 이름을 사용한다.
+	 -->
+	 
+	 <!-- insert 연습 -->
+	 <insert id = "insertMember" parameterClass="kr.or.ddit.basic.MemberVO">
+	
+		 insert into mymember(mem_id, mem_name, mem_tel, mem_addr) 
+		 		values(#mem_id#,#mem_name#,#mem_tel#,#mem_addr#)
+	 	 
+	 </insert>
+	 
+	 <!-- update 연습 -->
+	 <update id = "updateMember" parameterClass="memVO">
+	 
+	 	update mymember set mem_name = #mem_name#, mem_tel = #mem_tel#, 
+	 									mem_addr =#mem_addr# where mem_id = #mem_id#
+	 
+	 </update>
+	 
+	 
+	 <delete id="deleteMember" parameterClass="String">
+	 
+	 delete from mymember where mem_id = #아무거나# <!-- 파라미터가 한개만 들어오기때문에 신경쓰지 말고 넣을것 -->
+	 
+	 </delete>
+	 
+	 <select id = "getMemberAll" resultClass="memVO">
+	 
+	 select * from mymember
+	 
+	 </select>
+	 
+	 <select id = "getMember" parameterClass="String" resultClass="memVO">
+	 
+	 select * from mymember where mem_id = #mem_id#
+	 
+	 </select>
+	 
+	 
+	 
+</sqlMap>
+
+
+
+
+
+

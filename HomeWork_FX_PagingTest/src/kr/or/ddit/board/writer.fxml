@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:controller="kr.or.ddit.board.BoardFXMainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="writeTitle" layoutX="77.0" layoutY="13.0" prefHeight="16.0" prefWidth="492.0" />
+      <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="제 목" textAlignment="CENTER" wrappingWidth="49.796875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="writeContents" layoutX="77.0" layoutY="73.0" prefHeight="279.0" prefWidth="492.0" />
+      <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="내 용" textAlignment="CENTER" wrappingWidth="49.796875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="writeBtn" layoutX="143.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="작성" />
+      <Button fx:id="writeCancel" layoutX="403.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="취소" />
+      <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="작성자" textAlignment="CENTER" wrappingWidth="49.796875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="writer" layoutX="77.0" layoutY="40.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace ="board">
+	
+	<select id="all"  resultClass="bVO">
+			select * from boardfx order by nums
+	</select>
+	
+	<insert id ="write" parameterClass ="bVO">
+	insert into boardfx (nums, titles, names, dateymd, datehms, cont, cnt)
+	values (seq_board2.nextval, #titles#, #names#, #dateymd#, #datehms#, #cont#, #cnt#)
+	</insert>
+	
+	
+	<update id="viewCount" parameterClass="bVO">
+		update boardfx set cnt = #cnt#    where nums = #nums#
+	</update>
+	
+	<update id="repair" parameterClass="bVO">
+		update boardfx set titles = #titles#, names = #names#, cont = #cont#    where nums = #nums#
+	</update>
+	
+	<delete id="delete" parameterClass="bVO">
+		delete boardfx where nums= #nums# and names= #names#
+	</delete>
+	
+	<select id="iWantSearch" parameterClass ="java.util.Map" resultClass="bVO" >
+	
+	select * from boardfx where 1=1   
+		<isNotEmpty prepend="AND" property="nums">
+			nums LIKE '%' || #nums# || '%'
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="titles">
+			titles LIKE '%' || #titles# || '%'
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="names">
+			names LIKE '%' || #names# || '%'
+		</isNotEmpty>
+			order by nums
+	</select>
+</sqlMap>
+
+

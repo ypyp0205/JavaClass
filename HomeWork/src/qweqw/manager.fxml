@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:controller="manager.ManagerControler" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableView" layoutX="16.0" layoutY="211.0" prefHeight="333.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="110.0" text="회원ID" />
+          <TableColumn fx:id="nameCol" prefWidth="175.0" text="회원이름" />
+            <TableColumn fx:id="telCol" prefWidth="128.0" text="회원전화" />
+            <TableColumn fx:id="addrCol" prefWidth="120.0" text="회원주소" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="72.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="추 가" />
+      <Button fx:id="setBtn" layoutX="183.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="수 정" />
+      <Button fx:id="delBtn" layoutX="287.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="삭 제" />
+      <Button fx:id="confirm" layoutX="394.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="확 인" disable="true"/>
+      <Button fx:id="cancel" layoutX="494.0" layoutY="149.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="취 소" disable="true"/>
+      <TextField fx:id="txtId" layoutX="134.0" layoutY="20.0" prefHeight="23.0" prefWidth="421.0" promptText="회원 ID" />
+      <Text layoutX="86.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원 ID: " />
+      <TextField fx:id="txtName" layoutX="134.0" layoutY="54.0" prefHeight="23.0" prefWidth="421.0" promptText="회원 이름" />
+      <TextField fx:id="txtTel" layoutX="134.0" layoutY="85.0" prefHeight="23.0" prefWidth="421.0" promptText="회원 전화" />
+      <TextField fx:id="txtAddr" layoutX="134.0" layoutY="116.0" prefHeight="23.0" prefWidth="421.0" promptText="회원 주소" />
+      <Text layoutX="72.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원이름 :" wrappingWidth="62.0" />
+      <Text layoutX="72.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원전화 :" wrappingWidth="62.0" />
+      <Text layoutX="72.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원주소 :" wrappingWidth="62.0" />
+   </children>
+</AnchorPane>

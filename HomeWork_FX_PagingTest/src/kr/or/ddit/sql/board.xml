@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace = "board">
+
+	 <insert id="insertContent" parameterClass="kr.or.ddit.vo.BoardVO"> 
+	 
+	 INSERT INTO jdbc_board (board_no, board_title, board_writer, board_date, board_content)
+				 
+					 VALUES (board_seq.NEXTVAL,#board_title#,#board_writer#,SYSDATE,#board_content#)
+	 
+	 </insert>
+	 
+
+ 	 <update id="updateBoard" parameterClass="hashMap"> 
+	 
+ 	 UPDATE jdbc_board set board_title =#board_title#, board_writer =#board_writer#, board_content =#board_content#
+ 	 WHERE board_no = #bdNo# and board_title = #bdTitle# and board_writer = #bdWriter# and to_char(board_content) = #bdContent#  
+	 
+ 	 </update>
+	 
+ 	 <delete id="deleteBoard" parameterClass="String"> 
+	 
+	 delete from jdbc_board where board_no = #board_no#
+	 
+ 	 </delete>
+	 
+	 <select id="displayBoardAll" resultClass="kr.or.ddit.vo.BoardVO"> 
+	 
+ 	 select * from jdbc_board 
+	 
+ 	 </select> 
+ 	 
+ 	 <select id="searchBoard" parameterClass="kr.or.ddit.vo.BoardVO" resultClass="kr.or.ddit.vo.BoardVO">
+	 
+	 
+     select * from jdbc_board
+	 where 1=1
+	 <isNotEmpty property = "board_no">
+	 	and board_no = #board_no#	
+	 </isNotEmpty>
+	  <isNotEmpty property ="board_title">
+	  and board_title = #board_title#	
+	  </isNotEmpty>
+	  <isNotEmpty property ="board_writer">
+	  and board_writer = #board_writer#
+	  </isNotEmpty>
+
+
+
+	 
+	 </select>
+</sqlMap>			
+
+
+
+
+

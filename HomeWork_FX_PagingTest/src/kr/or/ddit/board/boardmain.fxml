@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="631.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.board.BoardFXMainController">
+   <children>
+      <TableView fx:id="tableView" layoutX="20.0" layoutY="89.0" prefHeight="439.0" prefWidth="812.0">
+        <columns>
+          <TableColumn fx:id="board_no" prefWidth="40.0" text="No" />
+          <TableColumn fx:id="board_title" prefWidth="175.0" text="제목" />
+            <TableColumn fx:id="board_writer" prefWidth="119.0" text="작성자" />
+            <TableColumn fx:id="board_date" prefWidth="148.0" text="작성날짜" />
+            <TableColumn fx:id="board_content" prefWidth="417.0" text="내용" />
+        </columns>
+      </TableView>
+      <Button fx:id="mainUpdate" layoutX="98.0" layoutY="2.0" mnemonicParsing="false" onAction="#update" prefHeight="35.0" prefWidth="84.0" text="수정" />
+      <Button fx:id="mainDelte" layoutX="182.0" layoutY="2.0" mnemonicParsing="false" onAction="#delte" prefHeight="35.0" prefWidth="84.0" text="삭제" />
+      <Button fx:id="mainWrite" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#write" prefHeight="35.0" prefWidth="90.0" text="작성" />
+      <Button fx:id="mainSearch" layoutX="688.0" layoutY="2.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="67.0" text="검색" />
+      <Button fx:id="mainExit" layoutX="755.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="84.0" text="종료" />
+      <ComboBox fx:id="comboMenu" layoutX="566.0" layoutY="2.0" onAction="#combo" prefHeight="35.0" prefWidth="122.0" />
+      <TextField fx:id="searchText" layoutX="265.0" layoutY="2.0" prefHeight="35.0" prefWidth="301.0" />
+      <Button fx:id="display" layoutX="8.0" layoutY="573.0" mnemonicParsing="false" onAction="#display" prefHeight="41.0" prefWidth="122.0" text="전체목록" />
+      <Pagination fx:id="page" layoutX="10.0" layoutY="38.0" prefHeight="542.0" prefWidth="826.0" />
+      
+   </children>
+</AnchorPane>

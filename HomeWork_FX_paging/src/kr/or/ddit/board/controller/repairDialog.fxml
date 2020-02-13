@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="35.0" layoutY="21.0" text="제목" />
+      <Label layoutX="35.0" layoutY="221.0" text="내용" />
+      <Button fx:id="repairbtn" layoutX="481.0" layoutY="60.0" mnemonicParsing="false" text="수정" />
+      <Button fx:id="deletebtn" layoutX="481.0" layoutY="30.0" mnemonicParsing="false" text="삭제" />
+      <Label layoutX="29.0" layoutY="57.0" text="작성자" />
+      <Label fx:id="writerrepair" layoutX="88.0" layoutY="57.0" prefHeight="23.0" prefWidth="342.0" style="-fx-background-color: white;" />
+      <Label fx:id="teatarearepair" alignment="TOP_LEFT" layoutX="88.0" layoutY="97.0" prefHeight="284.0" prefWidth="436.0" style="-fx-background-color: white;" textOverrun="CLIP" />
+      <Label fx:id="titlerepair" layoutX="88.0" layoutY="17.0" prefHeight="23.0" prefWidth="342.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

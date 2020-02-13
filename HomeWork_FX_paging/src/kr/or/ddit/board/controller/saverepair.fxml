@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="45.0" layoutY="14.0" text="제목" />
+      <Label layoutX="45.0" layoutY="217.0" text="내용" />
+      <TextField fx:id="savetitle" layoutX="84.0" layoutY="10.0" prefHeight="23.0" prefWidth="340.0" />
+      <TextField fx:id="savewrite" layoutX="84.0" layoutY="44.0" prefHeight="23.0" prefWidth="293.0" />
+      <TextArea fx:id="savecont" layoutX="84.0" layoutY="74.0" prefHeight="302.0" prefWidth="468.0" />
+      <Button fx:id="savebtn" layoutX="471.0" layoutY="37.0" mnemonicParsing="false" text="수정완료" />
+      <Label layoutX="39.0" layoutY="48.0" text="작성자" />
+   </children>
+</AnchorPane>

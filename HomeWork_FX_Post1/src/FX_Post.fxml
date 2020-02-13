@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FX_Post_Controller">
+   <children>
+      <ComboBox fx:id="combobox" layoutX="111.0" layoutY="14.0" prefWidth="150.0" />
+      <TextField fx:id="tfid" layoutX="289.0" layoutY="14.0" />
+      <Button fx:id="btn" layoutX="438.0" layoutY="14.0" text="검색" />
+      <TableView fx:id="tableView" layoutX="6.0" layoutY="37.0" prefHeight="354.0" prefWidth="587.0">
+        <columns>
+          <TableColumn fx:id="zipcode" prefWidth="98.0" text="우편번호" />
+          <TableColumn fx:id="sido" prefWidth="88.0" text="시도" />
+            <TableColumn fx:id="gugun" prefWidth="113.0" text="군구" />
+            <TableColumn fx:id="dong" prefWidth="97.0" text="동" />
+            <TableColumn fx:id="bunji" prefWidth="190.0" text="번지" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

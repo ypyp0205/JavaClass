@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.board.controller.BoardController">
+   <center>
+      <TableView fx:id="tableview" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colnum" prefWidth="44.0" text="번호" />
+          <TableColumn fx:id="coltitle" prefWidth="287.0" text="제목" />
+            <TableColumn fx:id="colwrite" minWidth="0.0" prefWidth="110.0" text="작성자" />
+            <TableColumn fx:id="colday" prefWidth="94.0" text="날짜" />
+            <TableColumn fx:id="colcnt" prefWidth="64.0" text="조회수" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Pagination fx:id="pagenum" layoutX="1.0" prefHeight="333.0" prefWidth="600.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Pagination>
+   </bottom>
+   <top>
+      <HBox prefHeight="0.0" prefWidth="600.0" spacing="24.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="boardtitle" text="샘플게시판">
+               <font>
+                  <Font name="GungsuhChe" size="22.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combo1" onAction="#comboSelect" prefWidth="150.0" />
+            <TextField fx:id="findfield" />
+            <Button fx:id="findbtn" mnemonicParsing="false" onAction="#findbtn" text="글검색">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+            </Button>
+            <Button fx:id="mainbtn" mnemonicParsing="false" onAction="#mainAct" text="글작성" textAlignment="CENTER">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>
